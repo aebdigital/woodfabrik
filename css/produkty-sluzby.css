@@ -1,0 +1,149 @@
+/* Products & Services Page Specific Styles */
+
+/* Services Detail Section */
+.services-detail-section {
+    padding: 80px 0;
+    background: #fff;
+}
+
+.service-detail-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    margin-bottom: 120px;
+    max-width: 95%;
+
+    padding: 0 20px;
+}
+
+.service-detail-item:last-child {
+    margin-bottom: 0;
+}
+
+/* Reverse layout for alternating rows */
+.service-detail-item.reverse {
+    grid-template-columns: 1fr 1fr;
+}
+
+.service-detail-item.reverse .service-detail-content {
+    order: 2;
+}
+
+.service-detail-item.reverse .service-detail-gallery {
+    order: 1;
+}
+
+/* Service Content */
+.service-detail-content h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #411700;
+    margin-bottom: 30px;
+    line-height: 1.2;
+}
+
+.service-detail-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #000;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+/* Service Gallery */
+.service-detail-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.service-detail-gallery img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.service-detail-gallery img:hover {
+    transform: scale(1.02);
+}
+
+/* Hide images beyond the first 2 */
+.service-detail-gallery img:nth-child(n+3) {
+    display: none;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .services-detail-section {
+        padding: 60px 0;
+    }
+
+    .service-detail-item {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        margin-bottom: 80px;
+        padding: 0 20px;
+    }
+
+    .service-detail-item.reverse {
+        grid-template-columns: 1fr;
+    }
+
+    .service-detail-item.reverse .service-detail-content {
+        order: 1;
+    }
+
+    .service-detail-item.reverse .service-detail-gallery {
+        order: 2;
+    }
+
+    .service-detail-content h2 {
+        font-size: 2.2rem;
+        margin-bottom: 20px;
+    }
+
+    .service-detail-content p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .service-detail-gallery {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .service-detail-gallery img {
+        height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .services-detail-section {
+        padding: 40px 0;
+    }
+
+    .service-detail-item {
+        gap: 30px;
+        margin-bottom: 60px;
+        padding: 0 15px;
+    }
+
+    .service-detail-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .service-detail-content p {
+        font-size: 0.95rem;
+    }
+
+    .service-detail-gallery {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .service-detail-gallery img {
+        height: 120px;
+    }
+}

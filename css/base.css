@@ -1,0 +1,181 @@
+/* Base Styles - Colors, Typography, and Layout */
+:root {
+    /* Color Variables */
+    --primary-color: #333333;
+    --secondary-color: #411700;
+    --accent-color: #ffffff;
+    --background-color: #ffffff;
+    --text-color: #333333;
+    --border-color: rgba(128, 128, 128, 0.1);
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --hover-bg: rgba(255, 255, 255, 0.9);
+    
+    /* Typography */
+    --font-family: 'Grift', sans-serif;
+    --line-height: 1.4;
+    
+    /* Layout */
+    --container-max-width: 95%;
+    --container-padding: 20px;
+    --navbar-height: 70px;
+    --border-radius: 8px;
+    
+    /* Transitions */
+    --transition-smooth: 0.3s ease;
+    --transition-fast: 0.1s ease;
+}
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-family);
+    line-height: var(--line-height);
+    color: var(--text-color);
+    background-color: var(--background-color);
+    scroll-behavior: smooth;
+}
+
+/* Global Paragraph Styles */
+p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #000;
+    font-weight: 300;
+    margin-bottom: 1rem;
+}
+
+/* Container */
+.container {
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+}
+
+
+/* Scroll Progress Indicator */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--border-color);
+    z-index: 9999;
+}
+
+.scroll-progress-bar {
+    width: 100%;
+    height: 0%;
+    background: var(--secondary-color);
+    transition: height var(--transition-fast);
+}
+
+/* Navigation Base Styles */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: all var(--transition-smooth);
+}
+
+.navbar-transparent {
+    background: transparent;
+    transition: all var(--transition-smooth);
+    box-shadow: none;
+}
+
+.navbar-transparent.scrolled,
+.navbar-transparent.mobile-menu-open {
+    background: var(--hover-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 2px 20px var(--shadow-color);
+}
+
+.nav-container {
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    padding: var(--container-padding);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo Base Styles */
+.logo-link {
+    text-decoration: none;
+    transition: opacity var(--transition-smooth);
+}
+
+.logo-link:hover {
+    opacity: 0.8;
+}
+
+.logo-img,
+.logo-image {
+    height: var(--navbar-height);
+    width: auto;
+    object-fit: contain;
+}
+
+/* Button Base Styles */
+.btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: all var(--transition-smooth);
+    text-decoration: none;
+    display: inline-block;
+    font-family: var(--font-family);
+}
+
+.btn-primary {
+    background: var(--primary-color);
+    color: var(--accent-color);
+}
+
+.btn-primary:hover {
+    opacity: 0.9;
+}
+
+/* Utility Classes */
+.text-center {
+    text-align: center;
+}
+
+.mb-1 { margin-bottom: 1rem; }
+.mb-2 { margin-bottom: 2rem; }
+.mb-3 { margin-bottom: 3rem; }
+
+.mt-1 { margin-top: 1rem; }
+.mt-2 { margin-top: 2rem; }
+.mt-3 { margin-top: 3rem; }
+
+.p-1 { padding: 1rem; }
+.p-2 { padding: 2rem; }
+.p-3 { padding: 3rem; }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    :root {
+        --container-max-width: 100%;
+        --container-padding: 15px;
+        --navbar-height: 50px;
+    }
+    
+    .container {
+        max-width: 90%;
+        padding: 0;
+    }
+}

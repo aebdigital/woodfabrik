@@ -1,0 +1,62 @@
+[build]
+  publish = "."
+
+[[redirects]]
+  from = "/pages/kontakt.html"
+  to = "/kontakt"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/pages/produkty-sluzby.html"
+  to = "/produkty-sluzby"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/pages/referencie.html"
+  to = "/referencie"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/contact-form.php"
+  to = "/kontakt"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/kontakt/"
+  to = "/kontakt"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/produkty-sluzby/"
+  to = "/produkty-sluzby"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/referencie/"
+  to = "/referencie"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/kontakt"
+  to = "/pages/kontakt.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/produkty-sluzby"
+  to = "/pages/produkty-sluzby.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/referencie"
+  to = "/pages/referencie.html"
+  status = 200
+  force = true
