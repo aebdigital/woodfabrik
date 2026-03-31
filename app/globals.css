@@ -1,0 +1,26 @@
+@layer theme, base, components, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities);
+
+@source "../app/**/*.{ts,tsx}";
+@source "../components/**/*.{ts,tsx}";
+
+@theme {
+  --font-sans: "Grift", sans-serif;
+}
+
+@import "../css/fonts.css";
+@import "../css/base.css";
+@import "../css/header.css";
+@import "../css/footer.css";
+@import "../css/cookies.css";
+@import "../css/hero.css";
+@import "../css/home.css";
+@import "../css/kontakt.css";
+@import "../css/produkty-sluzby.css";
+@import "../css/referencie.css";
+
+html,
+body {
+  min-height: 100%;
+}

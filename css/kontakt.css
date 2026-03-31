@@ -217,6 +217,48 @@
     box-shadow: 0 8px 20px rgba(65, 23, 0, 0.3);
 }
 
+.form-submit-btn:disabled {
+    opacity: 0.7;
+    cursor: wait;
+    transform: none;
+    box-shadow: none;
+}
+
+.contact-form-new input.error,
+.contact-form-new textarea.error {
+    border-color: #c62828;
+    background: #fff5f5;
+}
+
+.field-error {
+    margin-top: 8px;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #c62828;
+}
+
+.form-message {
+    display: none;
+    padding: 14px 16px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.form-message-success {
+    display: block;
+    background: #edf7ed;
+    color: #1b5e20;
+    border: 1px solid #a5d6a7;
+}
+
+.form-message-error {
+    display: block;
+    background: #ffebee;
+    color: #b71c1c;
+    border: 1px solid #ef9a9a;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .contact-content {

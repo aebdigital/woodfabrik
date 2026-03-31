@@ -1,5 +1,8 @@
 [build]
-  publish = "."
+  command = "npm run build"
+
+[functions]
+  directory = "netlify/functions"
 
 [[redirects]]
   from = "/pages/kontakt.html"
@@ -41,22 +44,4 @@
   from = "/referencie/"
   to = "/referencie"
   status = 301
-  force = true
-
-[[redirects]]
-  from = "/kontakt"
-  to = "/pages/kontakt.html"
-  status = 200
-  force = true
-
-[[redirects]]
-  from = "/produkty-sluzby"
-  to = "/pages/produkty-sluzby.html"
-  status = 200
-  force = true
-
-[[redirects]]
-  from = "/referencie"
-  to = "/pages/referencie.html"
-  status = 200
   force = true

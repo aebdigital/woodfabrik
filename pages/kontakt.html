@@ -150,8 +150,7 @@
                 <div class="contact-form-right">
                     <h3>Napíšte nám správu</h3>
                     <p class="form-description">Vyplňte formulár a ozveme sa vám čo najskôr.</p>
-                    <form class="contact-form-new" id="contact-form" name="contact" method="POST" action="/kontakt?sent=1" data-netlify="true" netlify-honeypot="bot-field">
-                        <input type="hidden" name="form-name" value="contact">
+                    <form class="contact-form-new" id="contact-form" name="contact" method="POST" action="/.netlify/functions/contact">
                         <div hidden aria-hidden="true">
                             <label>Nevypĺňajte toto pole: <input name="bot-field"></label>
                         </div>

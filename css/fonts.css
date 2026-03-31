@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: 'Grift';
-    src: url('../grift-geometric-typeface/grift-thin.ttf') format('truetype');
+    src: url('/grift-geometric-typeface/grift-thin.ttf') format('truetype');
     font-weight: 100;
     font-style: normal;
     font-display: swap;
@@ -10,7 +10,7 @@
 
 @font-face {
     font-family: 'Grift';
-    src: url('../grift-geometric-typeface/grift-extralight.ttf') format('truetype');
+    src: url('/grift-geometric-typeface/grift-extralight.ttf') format('truetype');
     font-weight: 200;
     font-style: normal;
     font-display: swap;
@@ -18,7 +18,7 @@
 
 @font-face {
     font-family: 'Grift';
-    src: url('../grift-geometric-typeface/grift-light.ttf') format('truetype');
+    src: url('/grift-geometric-typeface/grift-light.ttf') format('truetype');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
@@ -26,7 +26,7 @@
 
 @font-face {
     font-family: 'Grift';
-    src: url('../grift-geometric-typeface/grift-regular.ttf') format('truetype');
+    src: url('/grift-geometric-typeface/grift-regular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -34,7 +34,7 @@
 
 @font-face {
     font-family: 'Grift';
-    src: url('../grift-geometric-typeface/grift-medium.ttf') format('truetype');
+    src: url('/grift-geometric-typeface/grift-medium.ttf') format('truetype');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -42,7 +42,7 @@
 
 @font-face {
     font-family: 'Grift';
-    src: url('../grift-geometric-typeface/grift-semibold.ttf') format('truetype');
+    src: url('/grift-geometric-typeface/grift-semibold.ttf') format('truetype');
     font-weight: 600;
     font-style: normal;
     font-display: swap;
@@ -50,7 +50,7 @@
 
 @font-face {
     font-family: 'Grift';
-    src: url('../grift-geometric-typeface/grift-bold.ttf') format('truetype');
+    src: url('/grift-geometric-typeface/grift-bold.ttf') format('truetype');
     font-weight: 700;
     font-style: normal;
     font-display: swap;
@@ -58,7 +58,7 @@
 
 @font-face {
     font-family: 'Grift';
-    src: url('../grift-geometric-typeface/grift-extrabold.ttf') format('truetype');
+    src: url('/grift-geometric-typeface/grift-extrabold.ttf') format('truetype');
     font-weight: 800;
     font-style: normal;
     font-display: swap;
@@ -66,7 +66,7 @@
 
 @font-face {
     font-family: 'Grift';
-    src: url('../grift-geometric-typeface/grift-black.ttf') format('truetype');
+    src: url('/grift-geometric-typeface/grift-black.ttf') format('truetype');
     font-weight: 900;
     font-style: normal;
     font-display: swap;
@@ -74,7 +74,7 @@
 
 @font-face {
     font-family: 'Grift';
-    src: url('../grift-geometric-typeface/grift-extrabolditalic.ttf') format('truetype');
+    src: url('/grift-geometric-typeface/grift-extrabolditalic.ttf') format('truetype');
     font-weight: 800;
     font-style: italic;
     font-display: swap;

@@ -9,12 +9,6 @@ export function initForms() {
 function initContactForm() {
     const contactForm = document.getElementById('contact-form');
     if (contactForm) {
-        const searchParams = new URLSearchParams(window.location.search);
-        if (searchParams.get('sent') === '1') {
-            showFormMessage('Správa bola úspešne odoslaná. Ďakujeme za kontakt!', 'success');
-            window.history.replaceState({}, document.title, window.location.pathname);
-        }
-
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
             
@@ -38,28 +32,28 @@ function initContactForm() {
             
             // Prepare form data
             const formData = new FormData(contactForm);
-            const formName = contactForm.getAttribute('name');
-            formData.set('form-name', formName);
+            const payload = Object.fromEntries(formData.entries());
             
-            // Submit form to Netlify Forms while keeping the current page UX.
-            fetch('/', {
+            // Submit form to the Netlify Function that relays mail through SMTP2GO.
+            fetch(contactForm.action, {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded'
+                    'Content-Type': 'application/json'
                 },
-                body: new URLSearchParams(formData).toString()
+                body: JSON.stringify(payload)
             })
-            .then(response => {
+            .then(async response => {
+                const data = await response.json().catch(() => null);
                 if (!response.ok) {
-                    throw new Error(`Netlify Forms request failed with status ${response.status}`);
+                    throw new Error(data?.message || `Contact function failed with status ${response.status}`);
                 }
 
-                showFormMessage('Správa bola úspešne odoslaná. Ďakujeme za kontakt!', 'success');
+                showFormMessage(data?.message || 'Správa bola úspešne odoslaná. Ďakujeme za kontakt!', 'success');
                 contactForm.reset();
             })
             .catch(error => {
                 console.error('Form submission error:', error);
-                showFormMessage('Nepodarilo sa odoslať správu. Skúste to prosím neskôr.', 'error');
+                showFormMessage(error?.message || 'Nepodarilo sa odoslať správu. Skúste to prosím neskôr.', 'error');
             })
             .finally(() => {
                 // Reset button state
