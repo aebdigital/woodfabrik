@@ -65,6 +65,7 @@
     font-weight: 700;
     line-height: 1.1;
     margin-bottom: 20px;
+    color: #fff;
     text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     max-width: 650px;
 }
@@ -141,11 +142,12 @@
     font-size: 3rem;
     font-weight: 700;
     line-height: 1;
+    color: #fff;
     text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 .stat-plus {
-    color: white;
+    color: #fff;
 }
 
 .stat-label {
@@ -504,4 +506,3 @@
         gap: 10px;
     }
 }
-
